@@ -1,1 +1,14 @@
 # Monitoring-Data-Analysis
+
+manual de execução:
+  ```
+  inicie o ./dependencies.sh como root
+  depois execute = source package_modules/bin/activate
+
+  rode os scripts python como quiser;
+
+  por fim se for criar arquivos e manipulá-los retire permissões root com:
+      sudo chown -R "$USER":"$(id -gn)" package_modules
+      verifique se deu tudo certo com ls -la olhando para a pasta package_modules
+
+  caso desejar sair do venv python, execute = deactivate no ./raiz da pasta
