@@ -1,6 +1,6 @@
 import pandas as pd
 
-base_folder = '../dados/logs/fragmentation.csv'
+base_folder = './data_logs/logs/fragmentation.csv'
 minimum = 4
 
 # Read the CSV file into a DataFrame
@@ -24,4 +24,4 @@ ax = df_pivot.plot(ylabel='Process occurrences', xlabel='Time(H)')
 
 # Save the figure
 fig = ax.get_figure()
-fig.savefig(f'./fragmentation.png')
+fig.savefig(f'./plot_images/fragmentation.png')
