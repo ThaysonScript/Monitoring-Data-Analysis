@@ -4,7 +4,7 @@ import scipy.stats as stats
 from sklearn.linear_model import LinearRegression
 plt.close('all')
 
-MONITORING_FILES_PATH = '../dados/logs/'
+MONITORING_FILES_PATH = './data_logs/logs/'
 monitoring_cpu = MONITORING_FILES_PATH + 'monitoring-cpu.csv'
 monitoring_disks = MONITORING_FILES_PATH + 'monitoring-disk.csv'
 monitoring_zumbies = MONITORING_FILES_PATH + 'monitoring-zombies.csv'
@@ -50,7 +50,7 @@ def plot(filename, ylabel, datetime="date_time", title=None, separator=';', deci
         ax.plot(x, Y_pred, color='red')
         plt.show()
         fig = ax.get_figure()
-        fig.savefig(f'./plots/{title}-{col}.png')
+        fig.savefig(f'./plot_images/{title}-{col}.png')
 
 
 plot(title="CPU",filename=monitoring_cpu, ylabel='(percentage)', dayfirst=True, includeColYlabel=True)
